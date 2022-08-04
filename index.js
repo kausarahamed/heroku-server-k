@@ -116,7 +116,7 @@ async function run() {
 
     // for user collection (faisal)
 
-    app.get("/user", verifyJwt, async (req, res) => {
+    app.get("/user", async (req, res) => {
       const users = await userCollection.find().toArray();
       res.send(users);
     });
