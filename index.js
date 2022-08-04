@@ -121,6 +121,8 @@ async function run() {
       res.send(users);
     });
 
+    // for admin
+
     app.get("/admin/:email", async (req, res) => {
       const email = req.params.email;
       const user = await userCollection.findOne({ email: email });
@@ -256,7 +258,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("welcome to Knowledge Zone..Check");
+  res.send("welcome to Knowledge Zone.......");
 });
 
 app.listen(port, () => {
